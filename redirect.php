@@ -3,8 +3,8 @@
 $KEY="pagelanguage";
 $ENGLISH="en";
 $SPANISH="es";
-$URI_EN="http://www.guillermocebollero.es/cv/en";
-$URI_ES="http://www.guillermocebollero.es/cv/es";
+$URI_EN="/cv/en";
+$URI_ES="/cv/es";
 
 if(!isset($_COOKIE[$KEY])) {
   //Error, debería estar puesta, redirigimos a default es
