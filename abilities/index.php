@@ -65,6 +65,10 @@
       <!--   Icon Section   -->
       <div class="row">
       <?php
+      //VAR ZONE
+      $KEY="pagelanguage";
+      $SPANISH="es";
+
       $jsonfile = file_get_contents('./abilities.json');
       $json = json_decode($jsonfile);
       $i = 0;
@@ -77,7 +81,7 @@
             </div>
             <div class="card-content">
               <span class="card-title grey-text text-darken-4">
-                <? echo $ability->name_ES;?>
+                <? if $_COOKIE[$KEY]===$SPANISH ? echo $ability->name_ES; : echo $ability->name_EN?>
                 <i class="material-icons right">code</i></span>
                 <ul class="pagination center">
                   <li <? if ($ability->value>0){ echo 'class="active indigo"';}?>><a>1</a></li>
